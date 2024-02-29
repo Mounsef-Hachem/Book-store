@@ -6,8 +6,8 @@
 	<parent>
 		<groupId>com.book-store</groupId>
 		<artifactId>book-store</artifactId>
-		<version>0.0.1</version>
 		<relativePath /> <!-- lookup parent from repository -->
+		<version>0.0.1</version>
 	</parent>
 	<artifactId>book-store-commun</artifactId>
 	<name>book-store-commun</name>
@@ -41,6 +41,6 @@
 		</plugins>
 	</build>
 
-	<groupId>com.book-store</groupId>
 	<version>0.0.1</version>
+	<groupId>com.book-store</groupId>
 </project>
