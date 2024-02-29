@@ -43,7 +43,7 @@ jobs:
         path: '${{ github.workspace }}/target/*.jar'
 
     - name: Debug - List Files in Target Directory
-      run: ls -l /home/runner/work/Book-store/Book-store/target
+      run: ls -l ${{ github.workspace }}/target
   
 
   deploy:
