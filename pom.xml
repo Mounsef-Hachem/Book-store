@@ -76,7 +76,6 @@
 		</profile>
 	</profiles>
 	<modules>
-		<module>bin</module>
 		<module>book-store-commun</module>
 	</modules>
 </project>
