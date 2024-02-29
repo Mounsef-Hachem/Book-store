@@ -12,7 +12,7 @@
 	<groupId>com.book-store</groupId>
 	<artifactId>book-store</artifactId>
 	<version>0.0.1</version>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 	<name>book-store</name>
 	<description>Online book store application</description>
 	<properties>
@@ -75,7 +75,4 @@
 			<id>prd</id>
 		</profile>
 	</profiles>
-	<modules>
-		<module>book-store-commun</module>
-	</modules>
 </project>
