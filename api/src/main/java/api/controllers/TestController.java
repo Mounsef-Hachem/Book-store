@@ -16,4 +16,9 @@ public class TestController {
 	String helloController() {
 		return service.sayHello();
 	}
+	
+	@GetMapping("/test")
+	String testController() {
+		return "Test allah allah";
+	}
 }
