@@ -21,18 +21,12 @@ jobs:
         with:
           java-version: '17'
 
-      - name: Repakage with Maven
+      - name: Build with Maven
         run: |
-          echo ${{ github.workspace }}
-          mvn clean package spring-boot:repackage
+          mvn clean install 
           echo "-------------------------------------"
           ls -R ${{ github.workspace }}
           ls -R ${{ github.workspace }}//api/target
-        working-directory: ${{ github.workspace }}
-
-      - name: Build with Maven
-        run: |
-          mvn clean install -DskipTests=true
         working-directory: ${{ github.workspace }}
 
       - name: Upload artifact for deployment job
