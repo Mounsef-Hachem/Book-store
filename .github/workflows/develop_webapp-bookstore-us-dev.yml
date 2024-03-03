@@ -22,18 +22,13 @@ jobs:
           java-version: '17'
 
       - name: Build with Maven
-        run: |
-          mvn clean install 
-          echo "-------------------------------------"
-          ls -R ${{ github.workspace }}
-          ls -R ${{ github.workspace }}//api/target
-        working-directory: ${{ github.workspace }}
+        run: mvn clean install
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: '${{ github.workspace }}/api/target/*.jar'
+          path: '${{ github.workspace }}/target/*.jar'
 
   deploy:
     runs-on: ubuntu-latest
@@ -54,5 +49,5 @@ jobs:
         with:
           app-name: 'webapp-bookstore-us-dev'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E8D4DEDB9D18434F9DDB69E80A0AA9A9 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B315959491364EB9B05ADB4874863562 }}
           package: '*.jar'
