@@ -4,7 +4,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication()
-@ComponentScan(basePackages = {"common.service", "api.controllers"})
+@ComponentScan(basePackages = {"common", "api"})
 public class BookStoreApiApplication {
 
 	public static void main(String[] args) {
