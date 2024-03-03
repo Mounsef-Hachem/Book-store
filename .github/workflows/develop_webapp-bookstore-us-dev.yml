@@ -24,6 +24,7 @@ jobs:
       - name: Repakage with Maven
         run: |
           echo ${{ github.workspace }}
+          ls -R ${{ github.workspace }}
           mvn clean package spring-boot:repackage
         working-directory: ${{ github.workspace }}
 
