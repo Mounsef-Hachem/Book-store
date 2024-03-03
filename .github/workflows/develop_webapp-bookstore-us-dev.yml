@@ -24,8 +24,10 @@ jobs:
       - name: Repakage with Maven
         run: |
           echo ${{ github.workspace }}
-          ls -R ${{ github.workspace }}
           mvn clean package spring-boot:repackage
+          echo "-------------------------------------"
+          ls -R ${{ github.workspace }}
+          ls -R ${{ github.workspace }}//api/target
         working-directory: ${{ github.workspace }}
 
       - name: Build with Maven
@@ -37,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          path: '${{ github.workspace }}/api/target/*.jar'
 
   deploy:
     runs-on: ubuntu-latest
