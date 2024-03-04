@@ -22,16 +22,12 @@ jobs:
           java-version: '17'
 
       - name: Build with Maven
-<<<<<<< HEAD
         run: |
           mvn clean install 
           echo "ls api/ target ----------------------"
           ls -R ${{ github.workspace }}//api/target
           echo "-------------------------------------"
         working-directory: ${{ github.workspace }}
-=======
-        run: mvn clean install
->>>>>>> eb5fdc8caf30f453d86f25af19a1454069cdfeee
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
@@ -58,9 +54,5 @@ jobs:
         with:
           app-name: 'webapp-bookstore-us-dev'
           slot-name: 'Production'
-<<<<<<< HEAD
           publish-profile:  ${{ secrets.AzureAppService_PublishProfile_1234 }}
-=======
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B315959491364EB9B05ADB4874863562 }}
->>>>>>> eb5fdc8caf30f453d86f25af19a1454069cdfeee
           package: '*.jar'
