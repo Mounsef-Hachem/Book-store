@@ -25,7 +25,7 @@ jobs:
         run: |
           mvn clean install 
           echo "ls api/ target ----------------------"
-          ls -R ${{ github.workspace }}//api/target
+          ls -R ${{ github.workspace }}/api/target
           echo "-------------------------------------"
         working-directory: ${{ github.workspace }}
 
@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          path: '${{ github.workspace }}/api/target/*.jar'
 
   deploy:
     runs-on: ubuntu-latest
